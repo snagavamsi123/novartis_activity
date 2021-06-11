@@ -1,0 +1,10 @@
+1.install requirements  (pip install -r requirements.txt)
+2.Run the code by entering the command 'python manage.py runserver' in cmd with this project folder path
+
+
+#-----USED------------------
+Backend : Django Frame work/Python
+Frontend : HTML,CSS
+Database : Mysql
+Charts/Graphs  : Matplotlib
+Excel sheet handling : numpy,pandas,xlrd,openpyxl

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <title>Home</title>
+</head>
+<body class='index_body'>
+    <h2 align=left class='novartis-title'>Novartis Activity-1</h2>
+    <header align='right' class='header_btns'>
+        <div class='header_div'></div>
+            <form action='contacts'>
+                <button class='btn'>Contact Book</button>
+            </form>
+            <form action='add'>
+                <button class='btn'>New Contact </button>
+            </form>
+        </div>
+    </header>
+
+
+    <div class="body_text" align='center'>
+        <h1>Welcome</h1>
+    </div>
+
+    <div class='middle_btn' align='center'>
+        <!-- form action='contacts'>
+            {% csrf_token %}
+            <button type="submit" class='center_btn'>Contact Book</button>
+        </form>
+        <form action="add">
+            {% csrf_token %}
+            <button type='submit' class='center_btn'>New Contact </button>
+        </form -->
+        <ul class="middle_btn_ul">
+            <li><a href="contacts">Contact Book</a></li>
+            <li><a href="add">New Contact</a></li>
+        </ul>
+
+
+
+    </div>
+    
+    
+</body>
+</html>

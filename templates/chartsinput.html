@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'styles/style.css' %}">
+    <title>Charts Home</title>
+</head>
+<body class='charts_inp_body'>
+    <h2 align=left class='novartis-title'>Novartis Activity-2</h2>
+    <div class='selection_box' align=center>
+        <form action="charts" method='POST'>
+            {% csrf_token %}
+            <select name='select_type'>
+                <option value='manual'>Enter Manually</option>
+                <option value='excel'>Upload Excel</option>
+            </select>
+            <button  class='btn2' type="submit">Submit</button>
+        </form>
+    </div>
+    <br><br><br> <br><br><br> <br><br><br><br><br><br>
+    <div align=center {{manual_choice}}>
+        <form action='chartsoutput' method="POST">
+            {% csrf_token %}
+
+            <h1>PIE CHART</h1>
+            <table class='charts_table' border='1' align="center">
+                <tr class='table_heading' align="center">
+                    <td>Pie Category</td>
+                    <td>Share</td>
+                </tr>
+                <tr>
+                    <td>Category 1</td>
+                    <td><input type="tel" name="cat-1" id=""></td>
+                </tr>
+                <tr>
+                    <td>Category 2</td>
+                    <td><input type="tel" name="cat-2" id=""></td>
+                </tr>
+                <tr>
+                    <td>Category 3</td>
+                    <td><input type="tel" name="cat-3" id=""></td>
+                </tr>
+                
+            </table>
+            <br><br><br>
+            <h1>RADICAL GUAGE</h1>
+            <table class='charts_table' border='1' align="center">
+                <tr class='table_heading' align="center">
+                    <td>Pie Category</td>
+                    <td>Category size</td>
+                </tr>
+                <tr>
+                    <td>Category 1</td>
+                    <td><input type="tel" name="cat-4" id=""></td>
+                </tr>
+                <tr>
+                    <td>Category 2</td>
+                    <td><input type="tel" name="cat-5" id=""></td>
+                </tr>
+                <tr>
+                    <td>Category 3</td>
+                    <td><input type="tel" name="cat-6" id=""></td>
+                </tr>
+
+                <tr>
+                    <td>Category 4</td>
+                    <td><input type="tel" name="cat-7" id=""></td>
+                </tr>
+                <tr>
+                    <td>Category 5</td>
+                    <td><input type="tel" name="cat-8" id=""></td>
+                </tr>
+                <tr>
+                    <td>Category 6</td>
+                    <td><input type="tel" name="cat-9" id=""></td>
+                </tr>
+
+            </table>
+            <br>
+            <input type="submit">
+        </form>
+
+    </div>
+
+
+
+    
+    <div class='add_form' align=center {{excel_choice}}>
+
+        <br><br><br><br><br> 
+        <form class='add_inputs_form' action='chartsexcelcharts' method='POST' enctype="multipart/form-data" >
+            {% csrf_token %}
+            <h1 align=left class='add_inputs_heading'>Pie Chart</h1>
+            <div class='inputboxes'>
+                <input name='pie' placeholder="pie chart" type='file'> 
+            </div>
+            <h1 align=left class='add_inputs_heading'>Radical Guage</h1>
+            <div class='inputboxes'>
+                <input name='radial' placeholder="Radical Guage" type='file'> 
+            </div>
+
+            <button class='btn2' type='submit' name='' value=''>Upload</button>
+        </form>
+
+
+    </div>
+
+    
+</body>
+</html>

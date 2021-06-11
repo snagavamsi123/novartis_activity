@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'styles/style.css' %}">
+    <title>Output Charts</title>
+</head>
+<body>
+    <h2 align=left class='novartis-title'>Novartis Activity-2</h2>
+    <header align='right' class='header_btns'>
+        <div class='header_div'></div>
+            <form action='/charts'>
+                <button class='btn'>Home</button>
+            </form>
+        </div>
+    </header>
+    <br><br><br><br><br><br>
+    <div class=main_charts_div>
+        <div class=left_chart>
+            <h3>Pie Chart</h3>
+            {{graph|safe}}
+        </div>
+
+        <div class=right_chart>
+            <h3>Radical Guage</h3>
+            {{radial|safe}}
+        </div>
+
+    </div>
+    
+</body>
+</html>
